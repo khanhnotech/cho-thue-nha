@@ -106,7 +106,7 @@ exports.categories = async(req, res) => {
     try{
       const categories = await Category.find()
       if(!categories || categories.length === 0) return res.status(404).json({success: false, message: "Không tìm thấy Category"})
-      res.json(categories)
+      res.json({success: true, data: categories})
     }catch(err){
       res.status(500).json({success: false, message: err.message})
     }
