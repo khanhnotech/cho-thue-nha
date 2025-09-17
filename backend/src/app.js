@@ -11,7 +11,7 @@ app.use(express.json())
 
 app.use(morgan("dev"));
 // Store/img_Apartment
-app.use("/Store", express.static(path.join(__dirname, "Store")))
+app.use("/Store", express.static(path.join(__dirname, "../Store")))
 // routers init
 routes(app)
 module.exports = app

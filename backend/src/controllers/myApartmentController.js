@@ -139,6 +139,7 @@ exports.destroy = async(req, res) => {
 }
 exports.edit = async(req, res) => {
     try{
+      // console.log("Params:", req.params);
       const apartment = await Apartment.findById(req.params.id)
       if(!apartment) return res.status(404).json({success: false, message: "Không tìm thấy Apartment"})
       
